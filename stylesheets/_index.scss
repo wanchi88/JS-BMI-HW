@@ -1,0 +1,137 @@
+
+//header區塊
+.header-logo{
+    display: flex;
+    justify-content: end;
+    h1{
+        @include hide-text();
+    }
+
+}
+.header-input{
+    display: flex;
+    flex-direction: column;
+    margin-top: 18px;
+    label{
+        font-size: 18px;
+        color: $primary;
+        margin-bottom: 7px;
+    }
+    input{
+        background: rgba(255,255,255,0.18);
+        border: 2px solid #FFD366;
+        border-radius: 10px;
+        width: 250px;
+        height: 40px;
+        margin-bottom: 23px;
+        padding: 5px;
+        font-size: 24px;
+        
+    }
+    
+}
+
+.header-result{
+    display: flex;
+    justify-content: space-around;
+}
+
+.result-btn{
+    background: $primary;
+    width: 120px;
+    height: 120px;
+    border-radius: 100px;
+    border: 1px solid $primary;
+    font-size: 24px;
+    color: #424242;
+    &:hover{
+        box-shadow: 0 1px 6px 3px rgba(255,196,50,0.64);
+    }
+    &.active{
+        background: #DEA821;
+        border: 1px solid #DEA821;
+    }
+    
+}
+.show{
+    display: flex;
+}
+
+.result-icon{
+    width: 123px;
+    height: 123px;
+    border-radius: 51%;
+    border: 6px solid ;
+    padding: 41px 21px;
+    position: relative;
+    
+    h4{
+        font-size: 32px;
+    }
+    h6{
+        font-size: 14px;
+        text-align: center;
+    }
+}
+
+.result-reset{
+
+    width: 30px;
+    height: 30px;
+    border: 3px solid #424242;
+    border-radius: 51%;
+    background-image: url(../images/icons_loop.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: absolute;
+    bottom: 1px;
+    right: 1px;
+    
+}
+
+.showstatus{
+    font-size: 32px;
+    align-self: center;
+    padding-left: 18px;
+}
+
+
+//下方區塊
+.content{
+    min-height: 300px;
+
+    h2{
+        font-size: 24px;
+        color: #424242;
+        text-align: center;
+        margin-bottom: 36px;
+    }
+}
+.record{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.record-item{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 16px;
+    padding: 20px;
+    width: 67%;
+    background-color:#ffffff;
+
+    p{
+        font-size: 20px;
+        color: #424242;
+    }
+    span{
+        font-size: 12px;
+        color: #424242;
+    }
+    a{
+        text-decoration: none;
+    }
+
+}

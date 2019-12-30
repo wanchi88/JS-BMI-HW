@@ -1,0 +1,56 @@
+
+//color
+$primary: #FFD366;
+$secondary:#424242;
+$base:#F5F5F5;
+$danger:#FF1200;
+$middanger:#FF6C03;
+$lightendanger:#FF6C03 ;
+$overweight:#FF982D;
+$normal:#86D73F;
+$overlighten:#31BAF9;
+
+@mixin hide-text{
+	text-indent: 101%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.d-none{
+    display: none;
+}
+.text-white{
+    color: white;
+}
+
+$status: (
+    danger:#FF1200,
+    middanger:#FF6C03,
+    lightendanger:#FF6C03, 
+    overweight:#FF982D,
+    normal:#86D73F,
+    overlighten:#31BAF9,
+);
+
+
+
+@each $status-item, $status-color in $status {
+    .#{$status-item} {
+    
+    color: $status-color;
+    }
+    .bg-#{$status-item} {
+    
+    background: $status-color;
+    }
+    .border-#{$status-item} {
+    
+    border:5px solid $status-color;
+    }
+    .border-left-#{$status-item} {
+    
+    border-left:5px solid $status-color;
+    }
+    
+    
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>BMI計算機</title>
+
+    <link rel="stylesheet" href="stylesheets/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css">
+</head>
+<body>
+    <div class="wrap">
+        <div class="header">
+            <div class="header-logo">
+                <h1 class="text-hide">BMI 計算機</h1>
+                <img src="images/BMICLogo.png" alt="">
+            </div>
+            <div class="header-input">
+                
+                <label  for="height">身高 Cm</label>
+                <input class="height text-white" type="text" id="height" placeholder="請輸入身高">
+                <label  for="weight">體重 Kg</label>
+                <input class="weight text-white" type="text" id="weight" placeholder="請輸入體重">
+
+            </div>
+            <div class="header-result">
+                <input type="button" value="看結果" class="result-btn" id="resultBtn">
+                <div class="show"></div>
+                <!-- <div class="result-icon d-none" id="showBmi">
+                    <h4></h4>
+                    <h6>BMI</h6>
+                    <a href="#" class="result-reset"></a>
+                </div>
+                <p class="showstatus d-none" id="showStatus"></p> -->
+            </div>
+           
+        </div>
+
+
+
+        <section class="content">
+            <h2>BMI紀錄</h2>
+            <ul class="record">
+                <!-- <li class="record-item">
+                    <p>理想</p>
+                    <p> <span>BMI</span> 20.9</p>
+                    <p> <span>weight</span> 70kg </p>
+                    <p> <span>height</span> 180cm</p>
+                    <p> 2019/12/18</p>
+                </li>
+                <li class="record-item">
+                    <p>理想</p>
+                    <p> <span>BMI</span> 20.9</p>
+                    <p> <span>weight</span> 70kg </p>
+                    <p> <span>height</span> 180cm</p>
+                    <p> 2019/12/18</p>
+                    <a href="#"><i class="far fa-minus-square"></i></a>
+                </li> -->
+            </ul>
+
+        </section>
+        <div class="footer">
+            <img src="images/BMICFooterLogo.png" alt="">
+        </div>
+    </div>
+
+
+    <script src="js/all.js"></script>
+</body>
+</html>
