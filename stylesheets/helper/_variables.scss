@@ -8,7 +8,7 @@ $middanger:#FF6C03;
 $lightendanger:#FF6C03 ;
 $overweight:#FF982D;
 $normal:#86D73F;
-$overlighten:#31BAF9;
+$underweight:#31BAF9;
 
 @mixin hide-text{
 	text-indent: 101%;
@@ -29,7 +29,7 @@ $status: (
     lightendanger:#FF6C03, 
     overweight:#FF982D,
     normal:#86D73F,
-    overlighten:#31BAF9,
+    underweight:#31BAF9,
 );
 
 
