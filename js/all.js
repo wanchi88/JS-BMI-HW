@@ -5,12 +5,13 @@ var kg = document.querySelector('.weight');//選取文字欄位
 var showResult = document.querySelector('.show');
 var resultBtn = document.getElementById('resultBtn');//選取按鈕id
 var list = document.querySelector('.record');//選取UL
-
+var delAllBtn = document.getElementById('delAllBtn');
 var dataList = JSON.parse(localStorage.getItem('data')) || [];//設變數-[]儲存輸入的事項
 
 //監聽
 resultBtn.addEventListener('click', getInfo, false);//綁按鈕點擊
 list.addEventListener('click', deletList, false); //綁UL點擊delete
+delAllBtn.addEventListener('click', deleteAll, false); 
 updateList();//預設更新
 
 
@@ -54,7 +55,7 @@ function getInfo(e) {
 
     } else if (BMI <= 18.5) {
         var userStatus = '過輕';
-        var theme = 'overlighten'
+        var theme = 'underweight'
 
     }
     // console.log(userStatus);
@@ -88,6 +89,7 @@ function getInfo(e) {
 
 //將localstorage資料渲染到網頁
 function updateList() {
+    
     var str = '';
     var len = dataList.length;
 
@@ -103,8 +105,15 @@ function updateList() {
 
     }
     list.innerHTML = str;
+    //用if來判斷陣列是否為空陣列，空陣列則刪除全部的按鈕隱藏，有資料則會出現刪除全部的按鈕
+    if (dataList.length ==0) { 
+        delAllBtn.classList.add('d-none');
+    }else{
+        delAllBtn.classList.remove('d-none');
+    }
 
 }
+
 
 function BMIStatus() {
 
@@ -136,7 +145,7 @@ function BMIStatus() {
 
 }
 
-//刪除紀錄
+//刪除紀錄，限定刪除
 function deletList(e) {
     console.log(e.target.nodeName);
     if (e.target.nodeName == "A") {
@@ -151,4 +160,17 @@ function deletList(e) {
     localStorage.setItem('data', dataListString);
 
     updateList();   //更新網頁內容 
+}
+
+//全部刪除清空
+function deleteAll(e){
+
+    dataList.splice(0,dataList.length);//清空
+    // 把變更後的陣列上傳到localstorage
+    var dataListString = JSON.stringify(dataList);
+    localStorage.setItem('data', dataListString);
+
+    updateList();   //更新網頁內容 
+
+
 }
