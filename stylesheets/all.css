@@ -87,19 +87,19 @@
   border-left: 5px solid #86D73F;
 }
 
-.overlighten {
+.underweight {
   color: #31BAF9;
 }
 
-.bg-overlighten {
+.bg-underweight {
   background: #31BAF9;
 }
 
-.border-overlighten {
+.border-underweight {
   border: 5px solid #31BAF9;
 }
 
-.border-left-overlighten {
+.border-left-underweight {
   border-left: 5px solid #31BAF9;
 }
 
@@ -356,7 +356,25 @@ img {
   font-size: 24px;
   color: #424242;
   text-align: center;
-  margin-bottom: 36px;
+}
+
+.controlbtn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  width: 85%;
+  margin: 10px;
+}
+
+.deleteAll {
+  border: 2px solid #FFD366;
+  padding: 10px;
+  margin: 10px;
+  color: #424242;
+  font-size: 16px;
 }
 
 .record {
@@ -383,7 +401,7 @@ img {
       justify-content: space-around;
   margin-bottom: 16px;
   padding: 20px;
-  width: 67%;
+  width: 70%;
   background-color: #ffffff;
 }
 
